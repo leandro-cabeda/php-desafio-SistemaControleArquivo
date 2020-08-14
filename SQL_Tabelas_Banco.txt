@@ -1,0 +1,18 @@
+CREATE TABLE `users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_users` (`email`)
+);
+
+CREATE TABLE `files` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `file` varchar(150) NOT NULL,
+  `version` int NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_files` (`name`)
+);
+
+
